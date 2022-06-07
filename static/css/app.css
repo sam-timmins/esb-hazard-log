@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:ital,wght@0,400;1,200&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --black: #191919;
+    --black-transp: rgba(25, 25, 25, 0.5);
+    --blue: #2b3143;
+    --grey: #848081;
+    --purple: #9f95cd;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
+}
+
+.text-xs {
+    font-size: 1.5rem;
+}
+
+.text-sm {
+    font-size: 2rem;
+}
+
+.text-md {
+    font-size: 3rem;
+}
+
+.text-lg {
+    font-size: 4rem;
+}
+
+.text-xl {
+    font-size: 5rem;
+}
+
+.background-white {
+    background-color: var(--white);
+}
+
+.background-blue {
+    background-color: var(--blue);
+}
+
+.background-grey {
+    background-color: var(--grey);
+}
+
+.background-purple {
+    background-color: var(--purple);
+}
+
+.background-black {
+    background-color: var(--black);
+}
+
+.background-black-transp {
+    background-color: var(--black-transp);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-grey {
+    color: var(--grey);
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+
+
+#map {
+    width: 100%;
+    height: 40rem;
+}
