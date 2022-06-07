@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_header %}
+<h1 class="display-4 text-blue">Map</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="row container mx-auto">
+    <div class="col-12 col-md-6 d-flex flex-row justify-content-around mx-auto my-3">
+            <button type="button" id="get-location" class="btn background-blue text-white text-sm rounded-pill p-3">Get Your Location</button>
+
+    </div>
+    <div class="col-12 col-md-6 d-flex flex-row justify-content-around mx-auto my-3">
+        <button type="button" id="reset-location" class="btn background-grey text-white text-sm rounded-pill p-3">Reset your Location</button>
+    </div>
+</div>
+
+<div class="row container background-purple text-blue my-3 mx-auto rounded-3">
+    <div id="reset-text" class="text-sm col-12 col-md-6"></div>
+</div>
+
+
+<form action="" method="POST" class="row container p-3 mx-auto justify-content-center">
+    {% csrf_token %}
+    <div class="col-12 col-md-6 col-lg-4 p-3 text-center">
+        <label for="latitude">Latitude:</label>
+        <input type="text" name="latitude" id="latitude" disabled>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 p-3 text-center">
+        <label for="longitude">Longitude:</label>
+        <input type="text" name="longitude" id="longitude" disabled>
+    </div>
+    <div class="row container-fluid g-0 my-5">
+        <div class="col-12 col-md-6 mx-auto">
+            <div id="map"></div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum a natus esse ut distinctio numquam accusamus illo voluptatibus consequatur corrupti.</p>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+<script src="{% static 'js/locations/location.js' %}"></script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGCczqc4fjPg9QS3QsxM6g0x_ePkWIy1k&callback=initMap&v=weekly"
+    async>
+</script>
+
+{% endblock %}
