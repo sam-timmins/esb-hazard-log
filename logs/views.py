@@ -1,3 +1,8 @@
+""" Views for the logs app """
+
 from django.shortcuts import render
 
-# Create your views here.
+def logs(request):
+    """ A view to return the logs page """
+
+    return render(request, 'logs/logs.html')
