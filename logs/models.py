@@ -38,6 +38,7 @@ class TreeCategory(models.Model):
 class ToolsRequired(models.Model):
     """ Tools Required """
     name = models.CharField(
+        max_length=200,
         unique=True,
         blank=False,
     )
@@ -106,7 +107,6 @@ class PreWorkPlan(models.Model):
         blank=True,
     )
     landowner_phone_number = models.IntegerField(
-        max_length=10,
         null=True,
         blank=True,
     )
@@ -124,11 +124,9 @@ class PreWorkPlan(models.Model):
         null=True,
     )
     hours_to_complete = models.IntegerField(
-        max_length=2,
         blank=False,
     )
     number_of_crew_members = models.IntegerField(
-        max_length=2,
         blank=False,
     )
     switch_out_required = models.IntegerField(
@@ -146,48 +144,56 @@ class PreWorkPlan(models.Model):
         on_delete=models.SET_NULL,
         blank=False,
         null=True,
+        related_name='tools_required_1',
     )
     tools_required_2 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_2',
     )
     tools_required_3 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_3',
     )
     tools_required_4 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_4',
     )
     tools_required_5 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_5',
     )
     tools_required_6 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_6',
     )
     tools_required_7 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_7',
     )
     tools_required_8 = models.ForeignKey(
         ToolsRequired,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name='tools_required_8',
     )
     site_safety_hazards = models.TextField(
         blank=False,
