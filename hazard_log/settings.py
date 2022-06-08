@@ -36,6 +36,7 @@ INSTALLED_APPS = [
 
     'home',
     'locations',
+    'logs',
 ]
 
 MIDDLEWARE = [
